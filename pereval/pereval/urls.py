@@ -3,6 +3,8 @@ from django.urls import path, include
 from rest_framework import routers
 from project import views
 
+from .yasg import urlpatterns as doc_urls
+
 
 
 router = routers.DefaultRouter()
@@ -13,3 +15,4 @@ urlpatterns = [
     path('api/', include(router.urls)),
 
 ]
+urlpatterns += doc_urls
